@@ -2,6 +2,8 @@
 <html>
 <body>
 
+<link rel="stylesheet" href="css/main.css">
+
 <h1>My first PHP Quiz</h1>
 
 
@@ -150,6 +152,7 @@ if (isset($_POST['question20']) && $_POST['question20']==="Real"){
 ?>
 
 <form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+
 <?php for ($x=0; $x<count($questions[0]) ; ++$x) { ?>
 
 <h3><?php  echo $questions[0][$x] ?></h3>
