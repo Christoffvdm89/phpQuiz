@@ -2,15 +2,17 @@
 <html>
 <body>
 
-<link rel="stylesheet" href="css/main.css">
 
-<h1>My first PHP Quiz</h1>
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<h1>PHP General Knowledge Quiz</h1>
 
 
 
 <?php
 
-$questions=[     ["1. How many stars are there on the flag of China?<br>",
+$questions=     [["1. How many stars are there on the flag of China?<br>",
                  "2. What is the currency of Mongolia?<br>",
                  "3. In which country is there a natural gas pit nicknamed the ‘Door to Hell’ that has been on fire since 1971?<br>",
                  "4. In 2013 which two airlines merged to become the world’s largest airline?<br>",
@@ -61,95 +63,86 @@ for ($x=0; $x<count($questions[0]) ; ++$x) {
   } echo "<br><br>";
 };
 */
-?>
-
-<div>
-
-
-</div>
 
 
 
-
-<?php
-
-if(isset($_POST['submit'])){
-  $x=0;
-  
-if (isset($_POST['question1']) && $_POST['question1']==="5"  ){
-  $x++;
-}
-
-if (isset($_POST['question2']) && $_POST['question2']==="Tugrik"){
+  if(isset($_POST['submit'])){
+    $x=0;
+    
+  if (isset($_POST['question1']) && $_POST['question1']==="5"  ){
     $x++;
-}
-  
-if (isset($_POST['question3']) && $_POST['question3']==="Turkmenistan"){
-    $x++;
-}
-if (isset($_POST['question4']) && $_POST['question4']==="American Airlines and US Airways"){
-    $x++;
-}
-if (isset($_POST['question5']) && $_POST['question5']==="A jacket covered in pockets allowing passengers to pack everything into their coats"){
-  $x++;
-}
-if (isset($_POST['question6']) && $_POST['question6']==="Justin Bieber"){
-    $x++;
-}
-if (isset($_POST['question7']) && $_POST['question7']==="Ho Chi Minh City"){
-    $x++;
-}
-if (isset($_POST['question8']) && $_POST['question8']==="Canada"){
-  $x++;
-}
-if (isset($_POST['question9']) && $_POST['question9']==="Venezuela"){
-  $x++;
-}
-if (isset($_POST['question10']) && $_POST['question10']==="1955"){
-  $x++;
-}
-if (isset($_POST['question11']) && $_POST['question12']==="Jupiter"){
-  $x++;
-}
-if (isset($_POST['question13']) && $_POST['question13']==="44"){
-  $x++;
-}
-if (isset($_POST['question14']) && $_POST['question14']==="Blue"){
-  $x++;
-}
-if (isset($_POST['question15']) && $_POST['question15']==="Pod"){
-  $x++;
-}
-if (isset($_POST['question16']) && $_POST['question16']==="Alexander Fleming?"){
-  $x++;
-}
-if (isset($_POST['question17']) && $_POST['question17']==="November 22 1963"){
-  $x++;
-}
-if (isset($_POST['question18']) && $_POST['question18']==="12"){
-  $x++;
-}
-if (isset($_POST['question19']) && $_POST['question19']==="Walt Disney"){
-  $x++;
-}
-if (isset($_POST['question20']) && $_POST['question20']==="Real"){
-  $x++;
-}
-  echo "Your score is $x <br>";
-  if ($x>15) {
-    echo "Well done";
-  }elseif ($x>10) {
-    echo "You only did ok";
-  }else{
-    echo "Please try again";
   }
- 
-}
 
-
+  if (isset($_POST['question2']) && $_POST['question2']==="Tugrik"){
+      $x++;
+  }
+    
+  if (isset($_POST['question3']) && $_POST['question3']==="Turkmenistan"){
+      $x++;
+  }
+  if (isset($_POST['question4']) && $_POST['question4']==="American Airlines and US Airways"){
+      $x++;
+  }
+  if (isset($_POST['question5']) && $_POST['question5']==="A jacket covered in pockets allowing passengers to pack everything into their coats"){
+    $x++;
+  }
+  if (isset($_POST['question6']) && $_POST['question6']==="Justin Bieber"){
+      $x++;
+  }
+  if (isset($_POST['question7']) && $_POST['question7']==="Ho Chi Minh City"){
+      $x++;
+  }
+  if (isset($_POST['question8']) && $_POST['question8']==="Canada"){
+    $x++;
+  }
+  if (isset($_POST['question9']) && $_POST['question9']==="Venezuela"){
+    $x++;
+  }
+  if (isset($_POST['question10']) && $_POST['question10']==="1955"){
+    $x++;
+  }
+  if (isset($_POST['question11']) && $_POST['question12']==="Jupiter"){
+    $x++;
+  }
+  if (isset($_POST['question13']) && $_POST['question13']==="44"){
+    $x++;
+  }
+  if (isset($_POST['question14']) && $_POST['question14']==="Blue"){
+    $x++;
+  }
+  if (isset($_POST['question15']) && $_POST['question15']==="Pod"){
+    $x++;
+  }
+  if (isset($_POST['question16']) && $_POST['question16']==="Alexander Fleming?"){
+    $x++;
+  }
+  if (isset($_POST['question17']) && $_POST['question17']==="November 22 1963"){
+    $x++;
+  }
+  if (isset($_POST['question18']) && $_POST['question18']==="12"){
+    $x++;
+  }
+  if (isset($_POST['question19']) && $_POST['question19']==="Walt Disney"){
+    $x++;
+  }
+  if (isset($_POST['question20']) && $_POST['question20']==="Real"){
+    $x++;
+  }
+    echo "Your score is $x <br>";
+    if ($x>15) {
+      echo "Well done";
+    }elseif ($x>10) {
+      echo "You only did ok";
+    }else{
+      echo "Please try again";
+    }
+  
+  }
 
 
 ?>
+
+
 
 <form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
@@ -164,7 +157,8 @@ if (isset($_POST['question20']) && $_POST['question20']==="Real"){
 <?php }?>
 <?php }?>
 
-
+<br>
+<br>
  <input type="submit" value="submit" name="submit">
 </form>
 
